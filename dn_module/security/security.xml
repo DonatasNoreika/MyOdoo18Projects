@@ -1,0 +1,8 @@
+<odoo>
+    <record id="projects_manager" model="res.groups">
+        <field name="name">DN Module / Manager</field>
+    </record>
+    <record id="jobs_manager" model="res.groups">
+        <field name="name">DN Jobs / Manager</field>
+    </record>
+</odoo>

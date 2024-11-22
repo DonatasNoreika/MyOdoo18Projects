@@ -1,0 +1,60 @@
+<odoo>
+
+    <record model="ir.ui.view" id="project_form_view">
+        <field name="name">dn_module.project</field>
+        <field name="model">dn_module.project</field>
+        <field name="arch" type="xml">
+            <form string="Project form">
+                <group string="General">
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="teamleader_id"/>
+                </group>
+                 <notebook colspan="4">
+                    <page string="Darbuotojai">
+                        <field name="employee_ids">
+                            <list>
+                                <field name="name"/>
+                                <field name="job_title"/>
+                                <field name="work_phone"/>
+                            </list>
+                        </field>
+                    </page>
+                     <page string="Darbai">
+                        <field name="jobs_ids">
+                            <form>
+                                <field name="name"/>
+                            </form>
+                        </field>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="dn_project_list_view">
+        <field name="name">dn_module.project</field>
+        <field name="model">dn_module.project</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="start_date"/>
+                <field name="teamleader_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="projects_action">
+        <field name="name">Projects</field>
+        <field name="res_model">dn_module.project</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+
+    <menuitem id="main_dn_projects_menu" name="DN Projects">
+        <menuitem id="dn_projects_menu" name="Projects">
+            <menuitem id="projects_menu" name="Projects" action="projects_action"/>
+        </menuitem>
+    </menuitem>
+</odoo>

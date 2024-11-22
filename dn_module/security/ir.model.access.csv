@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dn_module_project,access_dn_module_project,model_dn_module_project,dn_module.projects_manager,1,1,1,1
+access_dn_module_job_manager,access_dn_module_job_manager,model_dn_module_job,dn_module.jobs_manager,1,1,1,1
